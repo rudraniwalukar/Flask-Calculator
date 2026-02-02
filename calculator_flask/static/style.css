@@ -1,0 +1,53 @@
+/* LIGHT THEME */
+body.light {
+    font-family: Arial;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    color: black;
+}
+
+/* DARK THEME */
+body.dark {
+    font-family: Arial;
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: white;
+}
+
+.calculator {
+    width: 320px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+body.dark .calculator {
+    background: #1e1e1e;
+}
+
+input, select, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+body.dark input,
+body.dark select {
+    background: #333;
+    color: white;
+}
+
+.theme-btn {
+    background: #555;
+    color: white;
+    margin-bottom: 15px;
+}

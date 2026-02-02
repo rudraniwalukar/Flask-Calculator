@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="light">
+
+<div class="calculator">
+    <h2>Calculator</h2>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+    <form method="post">
+        <input type="number" name="num1" step="any" required>
+        <input type="number" name="num2" step="any" required>
+
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">×</option>
+            <option value="/">÷</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result != "" %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+</div>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const btn = document.querySelector(".theme-btn");
+
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        btn.innerText = "☀️ Light Mode";
+    } else {
+        btn.innerText = "🌙 Dark Mode";
+    }
+}
+</script>
+
+</body>
+</html>
